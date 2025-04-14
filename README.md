@@ -1,36 +1,112 @@
-# Python Homework Template
-Please work on : `exercise.py`
+# Student ID Lookup System<br>학생 ID 조회 시스템
 
-## Purpose 목적:
+* Please work on the `exercise.py` file.<br>`exercise.py` 파일을 수정하세요.
 
-Why do we want to do this assignment? What do we want to accomplish?
+## Overview
+Create a Python program to manage a student ID database using a dictionary. It collects IDs and names, displays all pairs, and looks up an ID.
+<br>학생 ID 데이터베이스를 사전을 사용하여 관리하는 Python 프로그램을 작성하세요. ID와 이름을 수집하고, 모든 키-밸류 쌍을 표시하며, 입력된 ID를 조회합니다.
 
-## Description 설명:
+## Requirements
+1. **Part 1: Get Number of Students**
+   - Prompt `Enter number of students: ` to get an integer `n`.
+   <br>`Enter number of students: `를 출력하여 정수 `n`을 입력받으세요.
+   - Print `==========` (10 equals signs).
+   <br>`==========` (등호 10개)를 출력하세요.
+   - Create an empty dictionary.
+   <br>빈 사전을 생성하세요.
 
-* Describe homework here
+2. **Part 2: Collect IDs and Names**
+   - Use a `for` loop to:
+   <br>`for` 루프를 사용하여:
+     - Prompt `Enter student ID: ` for a string ID.
+     <br>`Enter student ID: `를 출력하여 문자열 ID를 입력받으세요.
+     - Prompt `Enter student name: ` for a string name.
+     <br>`Enter student name: `를 출력하여 문자열 이름을 입력받으세요.
+     - Store ID as key, name as value in the dictionary.
+     <br>ID를 키로, 이름을 값으로 사전에 저장하세요.
+   - Print `==========` after the loop.
+   <br>루프 후 `==========`를 출력하세요.
 
-## Instructions 지침:
+3. **Part 3: Display and Lookup**
+   - Print each dictionary entry as `Student ID: {id}, Name: {name}` (one per line).
+   <br>각 사전 항목을 `Student ID: {id}, Name: {name}`으로 출력하세요 (한 줄에 하나씩).
+   - Print `==========`.
+   <br>`==========`를 출력하세요.
+   - Print the first dictionary pair as `Random student: ID = {id}, Name = {name}`.
+   <br>사전의 첫 번째 쌍을 `Random student: ID = {id}, Name = {name}`으로 출력하세요.
+   - Print `==========`.
+   <br>`==========`를 출력하세요.
+   - Prompt `Enter ID to look up: ` for an ID.
+   <br>`Enter ID to look up: `를 출력하여 ID를 입력받으세요.
+   - Print `Queried ID: {id}: {name}` if the ID exists, or `Queried ID: {id}: Not found` if not.
+   <br>ID가 있으면 `Queried ID: {id}: {name}`을, 없으면 `Queried ID: {id}: Not found`를 출력하세요.
 
-* How to do this homework
-* `classroom.yml` file is at `.github/workflows/` folder. `.github` folder is hidden on the Linux operating system but will be visible on the Github repository.
-* Please set `vars.PYTHON_GRADER_URL` in the `classroom.yml` in the repository settings (Settings > Secrets and Variables > Actions > Variables) to your grader image (e.g., ghcr.io/your-org/python-pytest:latest).
-* Set your AI feedback natural language in `classroom.yml`.
+## Constraints
+- Use only: print, input, f-strings, if, for loops, lists, dictionaries.
+<br>print, input, f-string, if, for 루프, 리스트, 사전만 사용하세요.
+- Do not use: while loops, functions, try-except, return, file operations, random module.
+<br>while 루프, 함수, try-except, return, 파일 작업, random 모듈을 사용하지 마세요.
+- Assume valid inputs (integer for `n`, strings for IDs/names).
+<br>유효한 입력을 가정하세요 (`n`은 정수, ID와 이름은 문자열).
+- Include comments `# PART 1`, `# PART 2`, `# PART 3` before each section.
+<br>각 섹션 전에 `# PART 1`, `# PART 2`, `# PART 3` 주석을 포함하세요.
+- Use exact output formats shown in the example.
+<br>예시에 나온 정확한 출력 형식을 사용하세요.
 
-## Example Run 실행 예시:
-
-* input
+## Example Run
 ```
-input example here
+Enter number of students: 2
+Number of students: 2
+==========
+Enter student ID: A123
+Enter student name: Alice
+Enter student ID: B456
+Enter student name: Bob
+==========
+Student ID: A123, Name: Alice
+Student ID: B456, Name: Bob
+==========
+Random student: ID = A123, Name: Alice
+==========
+Enter ID to look up: C789
+Queried ID: C789: Not found
 ```
-* output
+<br>
 ```
-----------
-output example here
+Enter number of students: 2
+Number of students: 2
+==========
+Enter student ID: A123
+Enter student name: Alice
+Enter student ID: B456
+Enter student name: Bob
+==========
+Student ID: A123, Name: Alice
+Student ID: B456, Name: Bob
+==========
+Random student: ID = A123, Name: Alice
+==========
+Enter ID to look up: C789
+Queried ID: C789: Not found
 ```
 
-## Tips 팁:
+## Submission
+- Save your code as `student_code.py`.
+<br>코드를 `student_code.py`로 저장하세요.
+- Ensure it passes all tests (run `pytest` if available).
+<br>모든 테스트를 통과하는지 확인하세요 (`pytest` 실행 가능 시).
+- Do not modify test files.
+<br>테스트 파일을 수정하지 마세요.
 
-* please add some more hints here
+## Tips
+- Use `int(input(...))` for `n`.
+<br>`n`에 대해 `int(input(...))`을 사용하세요.
+- Iterate with `for id in students` to print dictionary pairs.
+<br>`for id in students`로 사전 쌍을 출력하세요.
+- Get the first pair using a loop or list conversion (e.g., `list(students.keys())[0]`).
+<br>루프나 리스트 변환(예: `list(students.keys())[0]`)으로 첫 번째 쌍을 가져오세요.
+- Match output formats exactly (e.g., `Queried ID: ...`).
+<br>출력 형식을 정확히 맞추세요 (예: `Queried ID: ...`).
 
 __Happy coding!__
 
