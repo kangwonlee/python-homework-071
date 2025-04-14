@@ -28,18 +28,16 @@ Create a Python program to manage a student ID database using a dictionary. It c
    <br>루프 후 `==========`를 출력하세요.
 
 3. **Part 3: Display and Lookup**
-   - Print each dictionary entry as `Student ID: {id}, Name: {name}` (one per line).
-   <br>각 사전 항목을 `Student ID: {id}, Name: {name}`으로 출력하세요 (한 줄에 하나씩).
-   - Print `==========`.
-   <br>`==========`를 출력하세요.
-   - Print the first dictionary pair as `Random student: ID = {id}, Name = {name}`.
-   <br>사전의 첫 번째 쌍을 `Random student: ID = {id}, Name = {name}`으로 출력하세요.
+   - Print each dictionary entry in `student-id : student-name` format (one per line).
+   <br>각 사전 항목을 `학생id : 학생이름` 형식으로 출력하세요 (한 줄에 하나씩).
    - Print `==========`.
    <br>`==========`를 출력하세요.
    - Prompt `Enter ID to look up: ` for an ID.
    <br>`Enter ID to look up: `를 출력하여 ID를 입력받으세요.
-   - Print `Queried ID: {id}: {name}` if the ID exists, or `Queried ID: {id}: Not found` if not.
-   <br>ID가 있으면 `Queried ID: {id}: {name}`을, 없으면 `Queried ID: {id}: Not found`를 출력하세요.
+   - Print `==========`.
+   <br>`==========`를 출력하세요.
+   - Print `student-id : student-name` if the ID exists, or `student-id : not found` if not.
+   <br>ID가 있으면 `학생id : 학생이름`을, 없으면 `학생id : not found`를 출력하세요.
 
 ## Constraints
 - Use only: print, input, f-strings, if, for loops, lists, dictionaries.
@@ -71,42 +69,18 @@ Random student: ID = A123, Name: Alice
 Enter ID to look up: C789
 Queried ID: C789: Not found
 ```
-<br>
-```
-Enter number of students: 2
-Number of students: 2
-==========
-Enter student ID: A123
-Enter student name: Alice
-Enter student ID: B456
-Enter student name: Bob
-==========
-Student ID: A123, Name: Alice
-Student ID: B456, Name: Bob
-==========
-Random student: ID = A123, Name: Alice
-==========
-Enter ID to look up: C789
-Queried ID: C789: Not found
-```
 
 ## Submission
-- Save your code as `student_code.py`.
-<br>코드를 `student_code.py`로 저장하세요.
 - Ensure it passes all tests (run `pytest` if available).
 <br>모든 테스트를 통과하는지 확인하세요 (`pytest` 실행 가능 시).
-- Do not modify test files.
-<br>테스트 파일을 수정하지 마세요.
 
 ## Tips
 - Use `int(input(...))` for `n`.
 <br>`n`에 대해 `int(input(...))`을 사용하세요.
 - Iterate with `for id in students` to print dictionary pairs.
-<br>`for id in students`로 사전 쌍을 출력하세요.
-- Get the first pair using a loop or list conversion (e.g., `list(students.keys())[0]`).
-<br>루프나 리스트 변환(예: `list(students.keys())[0]`)으로 첫 번째 쌍을 가져오세요.
-- Match output formats exactly (e.g., `Queried ID: ...`).
-<br>출력 형식을 정확히 맞추세요 (예: `Queried ID: ...`).
+<br>`for id in students`로 사전 key value 쌍을 출력하세요.
+- Match output formats exactly.
+<br>출력 형식을 정확히 맞추세요.
 
 __Happy coding!__
 
