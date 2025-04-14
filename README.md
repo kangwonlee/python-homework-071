@@ -46,8 +46,6 @@ Create a Python program to manage a student ID database using a dictionary. It c
 <br>while 루프, 함수, try-except, return, 파일 작업, random 모듈을 사용하지 마세요.
 - Assume valid inputs (integer for `n`, strings for IDs/names).
 <br>유효한 입력을 가정하세요 (`n`은 정수, ID와 이름은 문자열).
-- Include comments `# PART 1`, `# PART 2`, `# PART 3` before each section.
-<br>각 섹션 전에 `# PART 1`, `# PART 2`, `# PART 3` 주석을 포함하세요.
 - Use exact output formats shown in the example.
 <br>예시에 나온 정확한 출력 형식을 사용하세요.
 
@@ -77,6 +75,8 @@ Queried ID: C789: Not found
 ## Tips
 - Use `int(input(...))` for `n`.
 <br>`n`에 대해 `int(input(...))`을 사용하세요.
+- Include comments `# PART 1`, `# PART 2`, `# PART 3` before each section.
+<br>각 섹션 전에 `# PART 1`, `# PART 2`, `# PART 3` 주석을 포함하세요.
 - Iterate with `for id in students` to print dictionary pairs.
 <br>`for id in students`로 사전 key value 쌍을 출력하세요.
 - Match output formats exactly.
