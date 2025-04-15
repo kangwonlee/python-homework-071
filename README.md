@@ -49,7 +49,9 @@ Create a Python program to manage a student ID database using a dictionary. It c
 - Use exact output formats shown in the example.
 <br>예시에 나온 정확한 출력 형식을 사용하세요.
 
-## Example Run
+## Example Run 실행 예
+
+### 마지막에 물어보는 id 를 찾을 수 있는 경우
 ```
 Enter number of students: 2
 Number of students: 2
@@ -59,13 +61,30 @@ Enter student name: Alice
 Enter student ID: B456
 Enter student name: Bob
 ==========
-Student ID: A123, Name: Alice
-Student ID: B456, Name: Bob
+A123 : Alice
+B456 : Bob
 ==========
-Random student: ID = A123, Name: Alice
+Enter ID to look up: B456
+==========
+B456 : Bob
+```
+
+### 마지막에 없는 id 를 찾으려고 하는 경우
+```
+Enter number of students: 2
+Number of students: 2
+==========
+Enter student ID: A123
+Enter student name: Alice
+Enter student ID: B456
+Enter student name: Bob
+==========
+A123 : Alice
+B456 : Bob
 ==========
 Enter ID to look up: C789
-Queried ID: C789: Not found
+==========
+C789: Not found
 ```
 
 ## Submission
